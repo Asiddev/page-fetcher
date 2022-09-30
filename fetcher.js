@@ -27,7 +27,7 @@ const fetcher = function (args) {
     if (fs.existsSync(path)) {
       console.log("it already exists", path);
       rl.question(
-        `There is already a file at ${path} Would you like to overwrite? Press any key other than 'y' to quit:   `,
+        `There is already a file at ${path} Would you like to overwrite? Press any key other than 'y' to quit:  `,
         (answer) => {
           if (answer === "y") {
             fs.writeFile(`${path}`, body, () => {
